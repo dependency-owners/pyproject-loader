@@ -1,0 +1,57 @@
+name: CI
+permissions:
+  contents: read
+  pull-requests: write
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  build:
+    name: Build and test (Node.js ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - 24
+          - 22
+          - 20
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - if: ${{ matrix.node-version == 24 }}
+        name: Check formatting
+        run: pnpm lint
+      - if: ${{ matrix.node-version == 24 }}
+        name: Check types
+        run: pnpm typecheck
+      - name: Build
+        run: pnpm build
+      - name: Run tests
+        run: pnpm test
+      - if: ${{ matrix.node-version == 24 }}
+        name: Check for packaging errors
+        uses: kirkeaton/action-publint@cce8f8a434958047a7afb9ec1029c6b28e26a55e # v1.0.13
+      - if: ${{ matrix.node-version == 24 }}
+        name: Check dependency owners
+        uses: dependency-owners/check@f0b5ffcb1cda467205ff2a6984afdd1fb4103c86 # v1.0.2
+        with:
+          dependency-file: 'package.json'
+          loader: '@dependency-owners/package-json-loader'
+      - if: ${{ matrix.node-version == 24 }}
+        name: Assign reviewers to dependency changes
+        uses: dependency-owners/assign@e49268739428d8fb1509eb8b00c9550dbeced163 # v1.0.2
+        with:
+          dependency-file: 'package.json'
+          loader: '@dependency-owners/package-json-loader'

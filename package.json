@@ -1,0 +1,68 @@
+{
+  "name": "@dependency-owners/pyproject-loader",
+  "version": "0.0.0-development",
+  "description": "dependency-owners loader for pyproject.toml files",
+  "author": "Kirk Eaton <contact@kirkeaton.ca>",
+  "bugs": {
+    "url": "https://github.com/dependency-owners/pyproject-loader/issues"
+  },
+  "dependencies": {
+    "pip-requirements-js": "^1.0.2",
+    "smol-toml": "1.4.2"
+  },
+  "devDependencies": {
+    "@dependency-owners/package-json-loader": "2.0.0",
+    "@kirkeaton/prettier-config": "1.0.5",
+    "@kirkeaton/semantic-release-config": "1.1.0",
+    "@kirkeaton/tsconfig": "2.1.0",
+    "@types/lodash-es": "4.17.12",
+    "@types/node": "24.7.2",
+    "dependency-owners": "3.0.1",
+    "fs-fixture": "2.9.0",
+    "lodash-es": "4.17.21",
+    "prettier": "3.6.2",
+    "semantic-release": "24.2.9",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "funding": "https://kirkeaton.ca/sponsor",
+  "homepage": "https://github.com/dependency-owners/pyproject-loader#readme",
+  "keywords": [
+    "dependency",
+    "owners",
+    "pyproject",
+    "toml",
+    "loader"
+  ],
+  "license": "BSD-3-Clause",
+  "packageManager": "pnpm@10.18.2",
+  "peerDependencies": {
+    "dependency-owners": ">=1.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dependency-owners/pyproject-loader.git"
+  },
+  "scripts": {
+    "build": "pnpm clean && tsc",
+    "clean": "rm -rf dist",
+    "format": "prettier \"**/*.{js,json,md,ts}\" --write",
+    "lint": "prettier \"**/*.{js,json,md,ts}\" --check",
+    "prepublishOnly": "pnpm build",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module"
+}
