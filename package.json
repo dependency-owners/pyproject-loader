@@ -21,7 +21,7 @@
     "fs-fixture": "2.9.0",
     "lodash-es": "4.17.21",
     "prettier": "3.6.2",
-    "semantic-release": "24.2.9",
+    "semantic-release": "25.0.0",
     "typescript": "5.9.3"
   },
   "engines": {
