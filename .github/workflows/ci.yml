@@ -51,7 +51,7 @@ jobs:
           loader: '@dependency-owners/package-json-loader'
       - if: ${{ matrix.node-version == 24 }}
         name: Assign reviewers to dependency changes
-        uses: dependency-owners/assign@e49268739428d8fb1509eb8b00c9550dbeced163 # v1.0.2
+        uses: dependency-owners/assign@d07f1660faa9a51d39f92e507e6906d7030453f5 # v2.0.0
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
