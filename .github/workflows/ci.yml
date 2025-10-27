@@ -42,7 +42,7 @@ jobs:
         run: pnpm test
       - if: ${{ matrix.node-version == 24 }}
         name: Check for packaging errors
-        uses: kirkeaton/action-publint@cce8f8a434958047a7afb9ec1029c6b28e26a55e # v1.0.13
+        uses: kirkeaton/action-publint@f6722d58de351813725c81bfd078767b887e14c0 # v1.0.13
       - if: ${{ matrix.node-version == 24 }}
         name: Check dependency owners
         uses: dependency-owners/check@e5d07aa8a1e39880c41c618836ce5723484dd4c7 # v2.0.0
