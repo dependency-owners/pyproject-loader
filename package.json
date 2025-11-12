@@ -16,7 +16,7 @@
     "@kirkeaton/semantic-release-config": "1.1.0",
     "@kirkeaton/tsconfig": "2.1.0",
     "@types/lodash-es": "4.17.12",
-    "@types/node": "24.10.0",
+    "@types/node": "24.10.1",
     "dependency-owners": "3.0.1",
     "fs-fixture": "2.10.1",
     "lodash-es": "4.17.21",
