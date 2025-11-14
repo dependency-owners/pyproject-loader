@@ -37,8 +37,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       fs-fixture:
-        specifier: 2.10.1
-        version: 2.10.1
+        specifier: 2.11.0
+        version: 2.11.0
       lodash-es:
         specifier: 4.17.21
         version: 4.17.21
@@ -485,8 +485,8 @@ packages:
     resolution: {integrity: sha512-Xr9F6z6up6Ws+NjzMCZc6WXg2YFRlrLP9NQDO3VQrWrfiojdhS56TzueT88ze0uBdCTwEIhQ3ptnmKeWGFAe0A==}
     engines: {node: '>=14.14'}
 
-  fs-fixture@2.10.1:
-    resolution: {integrity: sha512-J45FBtdpW/hcIKP2YZa9qGg9GCsM3FD/TKktzgcCA0KxyInaPV7loRMahQup2jyUZ0LyJDsP7ocriCLVD/jDAw==}
+  fs-fixture@2.11.0:
+    resolution: {integrity: sha512-elzOu5Ru04qPSBT344kngxx1bpq3RbpznEyjTcn+NHI2nvzwDcGt2zde/a6LBmF5SJtgSYBGHAPnel6S1IefeA==}
     engines: {node: '>=18.0.0'}
 
   function-timeout@1.0.2:
@@ -1768,7 +1768,7 @@ snapshots:
       jsonfile: 6.2.0
       universalify: 2.0.1
 
-  fs-fixture@2.10.1: {}
+  fs-fixture@2.11.0: {}
 
   function-timeout@1.0.2: {}
 
