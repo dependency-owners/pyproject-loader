@@ -42,16 +42,16 @@ jobs:
         run: pnpm test
       - if: ${{ matrix.node-version == 24 }}
         name: Check for packaging errors
-        uses: kirkeaton/action-publint@b1f1900aa8c3ea648311bcbbc02d08537f4341a4 # v2.0.1
+        uses: kirkeaton/action-publint@b1f355e57041edc9c02e8f5ac392c8b3842d94d0 # v2.0.2
       - if: ${{ matrix.node-version == 24 }}
         name: Check dependency owners
-        uses: dependency-owners/check@d9da2f34905fc1bc147ea1989531e9c0f44d0e9e # v2.0.1
+        uses: dependency-owners/check@9e72503183d6a8687e241a94d44926fbb6c1f130 # v2.0.2
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
       - if: ${{ matrix.node-version == 24 }}
         name: Assign reviewers to dependency changes
-        uses: dependency-owners/assign@1ef13e21bbb4913c72b8fcb67370fdbec5a5a357 # v2.0.1
+        uses: dependency-owners/assign@949b8a8aae5b991259538ce95851a3554d743990 # v2.0.3
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
