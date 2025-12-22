@@ -16,10 +16,10 @@
     "@kirkeaton/semantic-release-config": "2.0.0",
     "@kirkeaton/tsconfig": "2.1.0",
     "@types/lodash-es": "4.17.12",
-    "@types/node": "24.10.3",
+    "@types/node": "24.10.4",
     "dependency-owners": "3.0.2",
     "fs-fixture": "2.11.0",
-    "lodash-es": "4.17.21",
+    "lodash-es": "4.17.22",
     "prettier": "3.7.4",
     "semantic-release": "25.0.2",
     "typescript": "5.9.3"
@@ -44,7 +44,7 @@
     "loader"
   ],
   "license": "BSD-3-Clause",
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.26.1",
   "peerDependencies": {
     "dependency-owners": ">=1.2.1"
   },
