@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "pip-requirements-js": "^1.0.2",
-    "smol-toml": "1.5.2"
+    "smol-toml": "1.6.0"
   },
   "devDependencies": {
     "@dependency-owners/package-json-loader": "2.0.0",
