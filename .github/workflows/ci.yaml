@@ -20,7 +20,7 @@ jobs:
           - 20
     steps:
       - name: Checkout repo
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Setup pnpm
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
       - name: Setup Node.js ${{ matrix.node-version }}
@@ -42,16 +42,16 @@ jobs:
         run: pnpm test
       - if: ${{ matrix.node-version == 24 }}
         name: Check for packaging errors
-        uses: kirkeaton/action-publint@c055793f83e94cd58fde48f15ca56e579bd4f165 # v2.0.7
+        uses: kirkeaton/action-publint@5db69354989711cdf7ab8265712c603535076f28 # v2.0.8
       - if: ${{ matrix.node-version == 24 }}
         name: Check dependency owners
-        uses: dependency-owners/check@5a44061de70a54d09763658d097e66881dba1a4f # v2.0.4
+        uses: dependency-owners/check@f55687f6be8bb11bab648b6a174203d37cf27367 # v2.0.5
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
       - if: ${{ matrix.node-version == 24 }}
         name: Assign reviewers to dependency changes
-        uses: dependency-owners/assign@3265731a68f97729a2493e68e664b69e9fa65430 # v2.0.6
+        uses: dependency-owners/assign@3d606296e739b337c0326392993de0f984f7b585 # v2.0.7
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
