@@ -19,8 +19,8 @@
     "@types/node": "24.10.9",
     "dependency-owners": "3.0.3",
     "fs-fixture": "2.11.0",
-    "lodash-es": "4.17.22",
-    "prettier": "3.8.0",
+    "lodash-es": "4.17.23",
+    "prettier": "3.8.1",
     "semantic-release": "25.0.2",
     "typescript": "5.9.3"
   },
@@ -44,7 +44,7 @@
     "loader"
   ],
   "license": "BSD-3-Clause",
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.28.1",
   "peerDependencies": {
     "dependency-owners": ">=1.2.1"
   },
