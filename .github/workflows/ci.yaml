@@ -40,16 +40,16 @@ jobs:
         run: npm run test
       - if: ${{ matrix.node-version == 24 }}
         name: Check for packaging errors
-        uses: kirkeaton/action-publint@31f86e6525cae7e65e285b3eae1e241cd67e8ebc # v2.0.10
+        uses: kirkeaton/action-publint@c3602a71c61778a0f25856f45997d334bfa05417 # v2.0.12
       - if: ${{ matrix.node-version == 24 }}
         name: Check dependency owners
-        uses: dependency-owners/check@f7dfbb20e6948285b67df88f2c86aee6dce82e5d # v2.0.9
+        uses: dependency-owners/check@e623a0b37cb4a518f69dcab755e0918593b6bb66 # v2.0.10
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
       - if: ${{ matrix.node-version == 24 }}
         name: Assign reviewers to dependency changes
-        uses: dependency-owners/assign@679c18883be9a105a8ba2564e564d3b8ecffff8a # v2.0.14
+        uses: dependency-owners/assign@be535ca88bd053ab00497b412c845620e6644121 # v2.0.15
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
