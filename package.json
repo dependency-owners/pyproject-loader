@@ -7,7 +7,7 @@
     "url": "https://github.com/dependency-owners/pyproject-loader/issues"
   },
   "dependencies": {
-    "pip-requirements-js": "^1.0.2",
+    "pip-requirements-js": "1.0.3",
     "smol-toml": "1.6.1"
   },
   "devDependencies": {
