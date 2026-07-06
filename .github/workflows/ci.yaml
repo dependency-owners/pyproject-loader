@@ -43,13 +43,13 @@ jobs:
         uses: kirkeaton/action-publint@790d324d5d1373c0409b5498776ab0010ca18355 # v2.0.19
       - if: ${{ matrix.node-version == 26 }}
         name: Check dependency owners
-        uses: dependency-owners/check@2584b8e3cf695bc1380a7e5d12feac177f6c0385 # v2.0.16
+        uses: dependency-owners/check@873d9df42ed1eaa620e6def42d0756cc3008540c # v2.0.17
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
       - if: ${{ matrix.node-version == 26 }}
         name: Assign reviewers to dependency changes
-        uses: dependency-owners/assign@6ba3e38ef6121366298e558fbdcb5e180e821ad2 # v2.0.23
+        uses: dependency-owners/assign@ac1fd950a2356ec64fe9dc92f21cd51f05aba420 # v2.0.24
         with:
           dependency-file: 'package.json'
           loader: '@dependency-owners/package-json-loader'
